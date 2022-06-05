@@ -6,4 +6,4 @@
 
 make
 
-./a.out
+./a.main
