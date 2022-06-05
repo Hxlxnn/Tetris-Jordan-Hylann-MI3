@@ -2,6 +2,8 @@
 
 
 
-# Run on Terminal 
- make
+# Run on Terminal; 
+
+make
+
 ./a.out
