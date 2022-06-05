@@ -2,8 +2,8 @@
 
 
 
-# Run on Terminal; 
+# Run Game
 
 make
 
-./a.main
+./main
