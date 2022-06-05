@@ -1,5 +1,8 @@
 #include "header.h"
-#include "fonction.c"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() 
 {
@@ -169,7 +172,7 @@ int main()
   unsigned long t2=getTimeMicrosec();
   b=t2;
   } while(orientation<1 || orientation>4 );
-  if (b-a>(15*1000000))
+  if (b-a>(30*1000000))
   {
     printf("Vous avez mis trop de temps\n");
     orientation=rand()%4;

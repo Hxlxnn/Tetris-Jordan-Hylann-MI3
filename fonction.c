@@ -1,12 +1,17 @@
 #include "header.h"
 
-unsigned long  getTimeMicrosec() 
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/time.h>
+#include <time.h>
+
+unsigned long getTimeMicrosec() 
 {
-   struct timeval tv;
+  struct timeval tv;
   gettimeofday(&tv,NULL);
   return (1000000 * tv.tv_sec) + tv.tv_usec;
-
 }
+
 void buffer()//
 {
   while(getc(stdin)!='\n')
