@@ -153,32 +153,33 @@ int main()
   tabPiece[6][3][2] = " *  ";
   tabPiece[6][3][3] = "    ";
 
-  int nbPiece, orientation, i, score=0, a, b;
+  int nbPiece, orientation, i, score = 0, a, b;
   srand(time(NULL));
   nbPiece = rand() % 7;
-  for(i=0; i<4 ; i++)
+  for(i = 0; i < 4 ; i++)
   {
-    printf("\n%d\n",i+1);
+    printf("\n%d\n", i + 1);
     affiche_piece(tabPiece[nbPiece][i]);
   }
   
-  unsigned long t1=getTimeMicrosec();// 
-  a=t1;
+  unsigned long t1 = getTimeMicrosec();// 
+  a = t1;
   do
   {
     printf("\nChoisissez l'orientation de la pièce: ");
     scanf("%d", &orientation);
     buffer();
-  unsigned long t2=getTimeMicrosec();
-  b=t2;
-  } while(orientation<1 || orientation>4 );
-  if (b-a>(30*1000000))
+    unsigned long t2 = getTimeMicrosec();
+    b = t2;
+  } while(orientation < 1 || orientation > 4);
+  
+  if (b - a > (15*1000000))
   {
     printf("Vous avez mis trop de temps\n");
-    orientation=rand()%4;
-  
+    orientation = rand() % 4;
   }
-  orientation=orientation-1;
+  
+  orientation -= 1;
   char tabPlateau[10][10];
   creer_plateau(tabPlateau);
   affiche_plateau(tabPlateau);
