@@ -12,7 +12,7 @@ unsigned long getTimeMicrosec()
   return (1000000 * tv.tv_sec) + tv.tv_usec;
 }
 
-void buffer()//
+void buffer()
 {
   while(getc(stdin)!='\n')
   {
@@ -21,7 +21,7 @@ void buffer()//
 }
 void affiche_piece(char *tab[])// Affiche UNE pièce de jeu
 {
-  int i, j;
+  int i;
   for (i = 3; i >= 0; i--) 
   {
     printf("%s\n", tab[i]);
@@ -39,7 +39,7 @@ void creer_plateau(char tabPlateau[10][10])// Crée le plateau de jeu
     }
   }
 }
-void affiche_plateau(char tabPlateau[10][10])//Affiche le tabeau de jeu
+void affiche_plateau(char tabPlateau[10][10])//Affiche le tableau de jeu
 {
   printf("\n  1   2   3   4   5   6   7   8   9   10  \n");
   for (int i = 0; i < 10; i++)
