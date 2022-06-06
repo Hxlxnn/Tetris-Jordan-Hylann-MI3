@@ -108,7 +108,7 @@ int maxligne(char tabPlateau[10][10], int colonne_ml, int largeur, char* piece[4
   return hauteur;
 }
 
-int Occuper(char tabPlateau[10][10], char *piece[7][4][4], int nbPiece_O, int orientation_O, int ligne_O, int colonne_O) //Elle permet d
+int Occuper(char tabPlateau[10][10], char *piece[7][4][4], int nbPiece_O, int orientation_O, int ligne_O, int colonne_O) //Elle permet de fusionner les 2 fct précédente pour placer la précedente pour placer la piece à la bonne hauteur
 {
   int largeur,max, i;
   largeur=largeurPiece(piece, nbPiece_O,  orientation_O);
